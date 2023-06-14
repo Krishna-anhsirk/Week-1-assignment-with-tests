@@ -7,6 +7,17 @@ Try running it for
 Hint - use Date class exposed in JS
 */
 
+function calculateSum(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
 function calculateTime(n) {
-    return 0.01;
+  const startTime = Date.now();
+  const sumToN = calculateSum(n);
+  const endTime = Date.now();
+  return Math.round((endTime - startTime) / 1000);
 }
